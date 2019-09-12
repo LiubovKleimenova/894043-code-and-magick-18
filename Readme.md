@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Liubov Kleimenova](https://up.htmlacademy.ru/javascript/18/user/894043).
-* Наставник: [Сергей Рожков] (https://htmlacademy.ru/profile/id1069033).
+* Наставник: [Сергей Рожков](https://htmlacademy.ru/profile/id1069033).
 
 ---
 
