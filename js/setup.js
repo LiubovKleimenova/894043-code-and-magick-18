@@ -13,13 +13,13 @@ document.querySelector('.setup-similar').classList.remove('hidden');
 var similarWizardsList = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
-//функция, достающая случайный элемент массива
+// функция, достающая случайный элемент массива
 var getRandomElement = function (anyArray) {
   var randomElement = anyArray[Math.floor(Math.random() * anyArray.length)];
   return randomElement;
-}
+};
 
-//функция, создающая одного рандомного волшебника
+// функция, создающая одного рандомного волшебника
 var createSomeWizard = function () {
   var someWizard = {};
   someWizard.name = getRandomElement(WIZARD_NAMES) + ' ' + getRandomElement(WIZARD_SURNAMES);
@@ -28,19 +28,19 @@ var createSomeWizard = function () {
   return someWizard;
 };
 
-//функция, создающая массив из n-ного количества волшебников
-var createWizardsCollection = function(wizardsNumber) {
+// функция, создающая массив из n-ного количества волшебников
+var createWizardsCollection = function (wizardsNumber) {
   var wizardsCollection = [];
-  for (var i = 0; i < wizardsNumber; i++ ) {
+  for (var i = 0; i < wizardsNumber; i++) {
     wizardsCollection.push(createSomeWizard());
   }
-  return wizardsCollection
-}
+  return wizardsCollection;
+};
 
-//создаем массив волшебников
+// создаем массив волшебников
 var wizardsArray = createWizardsCollection(NUMBER_OF_WIZARDS);
 
-//функция, которая рендерит одного волшебника
+// функция, которая рендерит одного волшебника
 var renderWizard = function (wizard) {
   var similarWizard = similarWizardTemplate.cloneNode(true);
   similarWizard.querySelector('.setup-similar-label').textContent = wizard.name;
@@ -48,7 +48,7 @@ var renderWizard = function (wizard) {
   similarWizard.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return similarWizard;
-}
+};
 
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < wizardsArray.length; i++) {
